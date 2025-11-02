@@ -1,0 +1,14 @@
+TailwindCSSメモ
+
+
+インストール時に以下のエラーが発生
+$ npm install -D tailwindcss autoprefixer postcss
+$ npx tailwindcss init -p
+npm error could not determine executable to run
+npm error A complete log of this run can be found in: /home/jinwatanabe/.npm/_logs/2025-01-26T01_25_28_159Z-debug-0.log
+
+
+
+3系指定でインストール
+$ npm install -D tailwindcss@3.4.13 autoprefixer postcss
+$ npx tailwindcss init -p
