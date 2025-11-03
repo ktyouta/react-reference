@@ -1,14 +1,14 @@
 import type { ReactNode } from "react";
 
 const colorStyle = {
-    red: "bg-red-500 text-white",
-    blue: "bg-blue-500 text-white",
-    green: "bg-green-500 text-white",
+    red: "bg-red-500 text-white focus:outline-none focus:ring-2 focus:ring-red-300",
+    blue: "bg-blue-500 text-white focus:outline-none focus:ring-2 focus:ring-blue-300",
+    green: "bg-green-500 text-white focus:outline-none focus:ring-2 focus:ring-green-300",
 };
 const sizeStyle = {
-    small: "text-sm p-2 rounded-md",
-    medium: "text-base p-4 rounded-md",
-    large: "text-xl px-10 py-4 rounded-lg",
+    small: "text-sm rounded-md",
+    medium: "text-base rounded-md",
+    large: "text-xl rounded-lg",
 };
 
 type Color = keyof typeof colorStyle;
@@ -19,7 +19,7 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
 {
     color: Color,
     size: Size,
-    child: ReactNode,
+    children: ReactNode,
 }
 
 export const Button = (props: ButtonProps) => {
@@ -29,7 +29,7 @@ export const Button = (props: ButtonProps) => {
             className={`${colorStyle[props.color]} ${sizeStyle[props.size]} ${props.className}`}
             {...props}
         >
-            {props.child}
+            {props.children}
         </button>
     );
 };

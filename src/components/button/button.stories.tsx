@@ -25,7 +25,7 @@ export const Red: Story = {
     args: {
         color: "red",
         size: "medium",
-        child: "赤ボタン",
+        children: "赤ボタン",
     },
 };
 
@@ -33,7 +33,7 @@ export const Blue: Story = {
     args: {
         color: "blue",
         size: "medium",
-        child: "青ボタン",
+        children: "青ボタン",
     },
 };
 
@@ -41,7 +41,7 @@ export const Green: Story = {
     args: {
         color: "green",
         size: "medium",
-        child: "緑ボタン",
+        children: "緑ボタン",
     },
 };
 
@@ -49,7 +49,7 @@ export const Large: Story = {
     args: {
         color: "blue",
         size: "large",
-        child: "大きいボタン",
+        children: "大きいボタン",
     },
 };
 
@@ -57,6 +57,6 @@ export const Small: Story = {
     args: {
         color: "red",
         size: "small",
-        child: "小さいボタン",
+        children: "小さいボタン",
     },
 };
