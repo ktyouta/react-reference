@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button, type ButtonProps } from "./button";
+import { Button, type propsType } from "./button";
 
-const meta: Meta<ButtonProps> = {
-    title: "Components/button/button",
+const meta: Meta<propsType> = {
+    title: "Components/mui/button/button",
     component: Button,
     tags: ["autodocs"],
     argTypes: {
@@ -19,7 +19,7 @@ const meta: Meta<ButtonProps> = {
 };
 
 export default meta;
-type Story = StoryObj<ButtonProps>;
+type Story = StoryObj<propsType>;
 
 export const Red: Story = {
     args: {
