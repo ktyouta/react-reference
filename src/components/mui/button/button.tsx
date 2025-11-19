@@ -1,33 +1,51 @@
 import React, { type ReactNode } from "react";
-import { Button as MUIButton, type ButtonProps } from "@mui/material";
+import { Button as MUIButton, type ButtonProps, type SxProps, type Theme } from "@mui/material";
 
 type Color = "red" | "blue" | "green";
 type Size = "small" | "medium" | "large";
 
 export type propsType = ButtonProps & {
-    colorType: Color;
-    sizeType: Size;
-    children: ReactNode;
-    className?: string;
+    colorType: Color,
+    sizeType: Size,
+    children: ReactNode,
+    className?: string,
 };
 
-const colorStyle: Record<Color, string> = {
-    red: "bg-red-500 text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-300",
-    blue: "bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300",
-    green: "bg-green-500 text-white hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300",
+const colorMap: Record<Color, string> = {
+    red: "#ef4444",
+    blue: "#3b82f6",
+    green: "#22c55e",
 };
 
-const sizeStyle: Record<Size, string> = {
-    small: "text-sm rounded-md px-3 py-1.5",
-    medium: "text-base rounded-md px-4 py-2",
-    large: "text-xl rounded-lg px-5 py-3",
+const colorHoverMap: Record<Color, string> = {
+    red: "#dc2626",
+    blue: "#2563eb",
+    green: "#16a34a",
+};
+
+const sizeMap: Record<Size, { padding: string; fontSize: string }> = {
+    small: { padding: "4px 12px", fontSize: "0.75rem" },
+    medium: { padding: "6px 16px", fontSize: "0.875rem" },
+    large: { padding: "10px 20px", fontSize: "1rem" },
 };
 
 export const Button = (props: propsType) => {
+
     return (
         <MUIButton
+            variant="contained"
+            disableElevation
             {...props}
-            className={`${colorStyle[props.colorType]} ${sizeStyle[props.sizeType]} ${props.className}`}
+            sx={{
+                backgroundColor: colorMap[props.colorType],
+                fontSize: sizeMap[props.sizeType].fontSize,
+                padding: sizeMap[props.sizeType].padding,
+                textTransform: "none",
+                "&:hover": {
+                    backgroundColor: colorHoverMap[props.colorType],
+                },
+                ...props.sx,
+            }}
         >
             {props.children}
         </MUIButton>

@@ -23,40 +23,40 @@ type Story = StoryObj<propsType>;
 
 export const Red: Story = {
     args: {
-        color: "red",
-        size: "medium",
+        colorType: "red",
+        sizeType: "medium",
         children: "赤ボタン",
     },
 };
 
 export const Blue: Story = {
     args: {
-        color: "blue",
-        size: "medium",
+        colorType: "blue",
+        sizeType: "medium",
         children: "青ボタン",
     },
 };
 
 export const Green: Story = {
     args: {
-        color: "green",
-        size: "medium",
+        colorType: "green",
+        sizeType: "medium",
         children: "緑ボタン",
     },
 };
 
 export const Large: Story = {
     args: {
-        color: "blue",
-        size: "large",
+        colorType: "blue",
+        sizeType: "large",
         children: "大きいボタン",
     },
 };
 
 export const Small: Story = {
     args: {
-        color: "red",
-        size: "small",
+        colorType: "red",
+        sizeType: "small",
         children: "小さいボタン",
     },
 };
