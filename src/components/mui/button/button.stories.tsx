@@ -60,3 +60,12 @@ export const Small: Story = {
         children: "小さいボタン",
     },
 };
+
+export const Custom: Story = {
+    args: {
+        colorType: "green",
+        sizeType: "small",
+        children: "ボタン(カスタム)",
+        sx: { padding: "15px 30px" }
+    },
+};

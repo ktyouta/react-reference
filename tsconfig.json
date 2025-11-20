@@ -1,7 +1,16 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "types": ["vitest"],
+    "baseUrl": "./src",
+    "esModuleInterop": true
+  },
+  "include": [
+    "src",
+    "vitest.config.ts"
   ]
 }
