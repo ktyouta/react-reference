@@ -1,6 +1,5 @@
 import { renderHook, act } from '@testing-library/react';
 import { useCounter } from './useCounter';
-import { expect, test, describe } from 'vitest'
 
 describe('useCounter', () => {
 
