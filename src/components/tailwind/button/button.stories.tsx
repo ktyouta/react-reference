@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button, type ButtonProps } from "./button";
+import { Button, type ButtonProps } from "./Button";
 
 const meta: Meta<ButtonProps> = {
     title: "Components/tailwind/button/button",
