@@ -6,8 +6,11 @@
     "jsx": "react-jsx",
     "strict": true,
     "types": ["vitest/globals"],
-    "baseUrl": "./src",
-    "esModuleInterop": true
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": [
     "src",
