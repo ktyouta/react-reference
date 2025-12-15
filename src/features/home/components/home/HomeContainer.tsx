@@ -1,13 +1,15 @@
-import { useHome } from "../../hooks/useHome";
+import { BodyContainer } from "../body/BodyContainer";
+import { FooterContainer } from "../footer/FooterContainer";
+import { HeaderContainer } from "../header/HeaderContainer";
 import { Home } from "./Home";
 
 export const HomeContainer = () => {
 
-    const props = useHome();
-
     return (
-        <Home
-            {...props}
-        />
+        <Home>
+            <HeaderContainer />
+            <BodyContainer />
+            <FooterContainer />
+        </Home>
     );
 };

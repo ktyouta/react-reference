@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const useHome = () => {
+export const useBody = () => {
 
     const [count, setCount] = useState(0);
 
