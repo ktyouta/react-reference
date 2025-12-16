@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react';
+import { Box } from '@mui/material';
+import { ReactNode } from 'react';
 import '../../../../App.css';
 
 type Props = {
@@ -8,8 +9,11 @@ type Props = {
 export const Home = (props: Props) => {
 
     return (
-        <React.Fragment>
+        <Box
+            sx={{
+            }}
+        >
             {props.children}
-        </React.Fragment>
+        </Box>
     )
 };

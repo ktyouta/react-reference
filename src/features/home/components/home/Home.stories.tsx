@@ -1,3 +1,4 @@
+import { Box } from '@mui/material'
 import type { Meta, StoryObj } from '@storybook/react'
 import { BodyContainer } from '../body/BodyContainer'
 import { Home } from './Home'
@@ -11,15 +12,24 @@ export default meta
 type Story = StoryObj<typeof Home>
 
 
-const HomeWithState = () => {
-
-    return (
-        <Home>
-            <BodyContainer />
-        </Home>
-    )
+export const Default: Story = {
+    render: () => {
+        return (
+            <Home>
+                <BodyContainer />
+            </Home>
+        )
+    },
 }
 
-export const Default: Story = {
-    render: () => <HomeWithState />,
+export const Custom: Story = {
+    render: () => {
+        return (
+            <Home>
+                <Box>
+                    message
+                </Box>
+            </Home>
+        )
+    },
 }
